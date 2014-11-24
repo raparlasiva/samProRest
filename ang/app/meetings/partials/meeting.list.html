@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<br/>
+<div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="well well-lg">
+                        <div class="row">
+                            <div class="col-lg-3"><!-- selected_status = -->
+                                <bs-dropdown data-menu-type="button" select-val="selected_status =selectedVal"
+                                    preselected-item="selected_status" data-dropdown-data="daysArry">
+                                </bs-dropdown>
+                            </div>
+                            <!--
+                            <div class="col-lg-3">
+                                <bs-dropdown data-menu-type="button" select-val="selectedVal"
+                                    preselected-item="selected_status" data-dropdown-data="daysArry">
+                                </bs-dropdown>
+                            </div>
+                            <div class="col-lg-3">
+                                <bs-dropdown data-menu-type="button" select-val="selectedVal"
+                                    preselected-item="selected_status" data-dropdown-data="daysArry">
+                                </bs-dropdown>
+                            </div>
+                            
+                            <div class="col-lg-3">
+                                <bs-dropdown data-menu-type="button" select-val="selectedVal"
+                                    preselected-item="selected_status" data-dropdown-data="statuses">
+                                </bs-dropdown>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hidden-xs col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label>
+                        <select style="font-weight:normal;" class="form-control" data-ng-model="$state.current.data.meetingHome.numPerPage">
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="250">250</option>
+                        </select>
+                    </label>
+                </div>
+               
+                <div class="col-xs-12 col-sm-offset-6 col-md-offset-6 col-lg-offset-6 col-sm-4 col-md-4 col-lg-4">
+                    <label class="input-group pull-right">
+                        <input style="font-weight:normal;" type="text" class="form-control" name="search.query" id="search.query" data-ng-model="$state.current.data.meetingHome.searchInput" placeholder="Filter by keyword(s)">
+                        <span class="input-group-btn">
+                    <button data-ng-click="clearSearch()" class="btn btn-default" type="button">
+                    <span data-ng-hide="$state.current.data.meetingHome.searchInput" class="glyphicon glyphicon-search"></span>
+                        <span data-ng-show="$state.current.data.meetingHome.searchInput" class="glyphicon glyphicon-remove"></span>
+                        </button>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th ng-click="sortList('MeetingName')">Name&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='MeetingName'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Day')">Day&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='Day'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('MeetTime')">MeetTime&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='MeetTime'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('BuildingName')">BuildingName&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='BuildingName'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Address')">Address&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='Address'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Area')">Area&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='Area'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Zip')">Zip&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='Zip'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Symbol')">Symbol&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='Symbol'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('BusLines')">BusLines&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingHome.sortingOrderShow =='BusLines'"   data-ng-class="$state.current.data.meetingHome.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="meetingData in $state.current.data.meetingHome.filteredMeetingTblData" data-ng-click="editVendor(meetingData)" ng-class="{'selected':$state.current.data.meetingHome.setSelectedRow==meetingData.MeetingId}">
+                                <td>{{meetingData.MeetingName}}</td>
+                                <td>{{meetingData.Day}}</td>
+                                <td>{{meetingData.MeetTime}}</td>
+                                <td>{{meetingData.BuildingName}}</td>
+                                <td>{{meetingData.Address}}</td>
+                                <td>{{meetingData.Area}}</td>
+                                <td>{{meetingData.Zip}}</td>
+                                <td>{{meetingData.Symbol}}</td>
+                                <td>{{meetingData.BusLines}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+                    (Showing {{begin + 1}} to {{end}} of {{$state.current.data.meetingHome.meetingTblData.length}} total entries)</p>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                    <div class="pull-right">
+                        <pagination total-items="$state.current.data.meetingHome.meetingTblData.length" num-pages="numPages" items-per-page="$state.current.data.meetingHome.numPerPage" max-size="maxSize" ng-model="$state.current.data.meetingHome.pagination"></pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

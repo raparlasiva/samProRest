@@ -1,0 +1,89 @@
+.GreenBackGround {
+	background-color: #8C8C64;
+}
+.QuickSearchLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	margin: 5px 0px 5px 20px;
+	width: 100%;
+	font-weight: bold; 
+}
+.Heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #000000;
+	font-size: small;
+}
+.SmallNote {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #000000;
+	text-decoration: none;
+}
+.FormFieldsSearch {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: normal;
+	color: #000000;
+}
+.SelectMult {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #000000;
+	letter-spacing: normal;
+}
+.RollOverLink {
+	cursor: hand;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #000000;
+	font-size: small;
+}
+.SubjectHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #000000;
+	font-size: small;
+}
+
+.WhiteTblHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.MeetingDayHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+}
+.LinkSmallBlue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #0000FF;
+	text-decoration: none;
+	cursor: hand;
+}
+.LinkMediumBlue {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #0000FF;
+	text-decoration: none;
+}
+A:hover {
+	text-decoration: underline;
+}
+.BigHeading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+}
+.BodyMeat {
+color:#000000;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:small;
+}

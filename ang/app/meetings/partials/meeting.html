@@ -1,0 +1,27 @@
+<div class="row">
+    <tabset>
+            <tab ui-sref="intergroupAng.meetings.list" active="$state.current.data.meetingTabs.meetingListAll">
+              <tab-heading>Search</tab-heading>
+            </tab>
+            <tab ui-sref="intergroupAng.meetings.hours" active="$state.current.data.meetingTabs.smeetingHourAll">
+              <tab-heading>Next 5 Hours</tab-heading>
+            </tab>
+            <tab ui-sref="intergroupAng.meetings.men" active="$state.current.data.meetingTabs.meetingMenAll">
+                  <tab-heading>Men Only</tab-heading>
+            </tab>
+            <tab ui-sref="intergroupAng.meetings.women" active="$state.current.data.meetingTabs.meetingWomenAll">
+                  <tab-heading>Women Only</tab-heading>
+            </tab>
+            <tab ui-sref="intergroupAng.meetings.glbt" active="$state.current.data.meetingTabs.meetingGlbtAll">
+                  <tab-heading>GLBT</tab-heading>
+            </tab>
+            <tab ui-sref="intergroupAng.meetings.spanish" active="$state.current.data.meetingTabs.meetingSpanishAll">
+                  <tab-heading>Spanish</tab-heading>
+            </tab>
+        
+    </tabset>
+</div>
+
+<div ui-view>
+    
+</div>

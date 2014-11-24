@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<br/>
+<div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="hidden-xs col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label>
+                        <select style="font-weight:normal;" class="form-control" data-ng-model="$state.current.data.meetingMen.numPerPage">
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="250">250</option>
+                        </select>
+                    </label>
+                </div>
+               
+                <div class="col-xs-12 col-sm-offset-6 col-md-offset-6 col-lg-offset-6 col-sm-4 col-md-4 col-lg-4">
+                    <label class="input-group pull-right">
+                        <input style="font-weight:normal;" type="text" class="form-control" name="search.query" id="search.query" data-ng-model="$state.current.data.meetingMen.searchInput" placeholder="Filter by keyword(s)">
+                        <span class="input-group-btn">
+                    <button data-ng-click="clearSearch()" class="btn btn-default" type="button">
+                    <span data-ng-hide="$state.current.data.meetingMen.searchInput" class="glyphicon glyphicon-search"></span>
+                        <span data-ng-show="$state.current.data.meetingMen.searchInput" class="glyphicon glyphicon-remove"></span>
+                        </button>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th ng-click="sortList('MeetingName')">Name&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='MeetingName'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Day')">Day&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='Day'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('MeetTime')">MeetTime&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='MeetTime'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('BuildingName')">BuildingName&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='BuildingName'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Address')">Address&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='Address'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Area')">Area&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='Area'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Zip')">Zip&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='Zip'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                <th ng-click="sortList('Symbol')">Symbol&nbsp;<a href=""><span  data-ng-if="$state.current.data.meetingMen.sortingOrderShow =='Symbol'"   data-ng-class="$state.current.data.meetingMen.reverseSort ? 'glyphicon glyphicon-chevron-up':'glyphicon glyphicon-chevron-down'"></span></a>
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="meetingData in $state.current.data.meetingMen.filteredMeetingTblData" data-ng-click="editVendor(meetingData)" ng-class="{'selected':$state.current.data.meetingMen.setSelectedRow==meetingData.MeetingId}">
+                                <td>{{meetingData.MeetingName}}</td>
+                                <td>{{meetingData.Day}}</td>
+                                <td>{{meetingData.MeetTime}}</td>
+                                <td>{{meetingData.BuildingName}}</td>
+                                <td>{{meetingData.Address}}</td>
+                                <td>{{meetingData.Area}}</td>
+                                <td>{{meetingData.Zip}}</td>
+                                <td>{{meetingData.Symbol}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+                    (Showing {{begin + 1}} to {{end}} of {{$state.current.data.meetingMen.meetingTblData.length}} total entries)</p>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                    <div class="pull-right">
+                        <pagination total-items="$state.current.data.meetingMen.meetingTblData.length" num-pages="numPages" items-per-page="$state.current.data.meetingMen.numPerPage" max-size="maxSize" ng-model="$state.current.data.meetingMen.pagination"></pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
