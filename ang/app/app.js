@@ -14,7 +14,7 @@
         $rootScope.$stateParams = $stateParams;
     }]);
 
-    app.constant('API_URL','http://'+location.hostname+'/intergroup-master/ang/data');
+    app.constant('API_URL','http://'+location.hostname+'/sampProRest/ang/data');
     
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,$urlRouterProvider){
         $urlRouterProvider.when('/meet', '/meeting/list');

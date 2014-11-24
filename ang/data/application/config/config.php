@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/intergroup-master/ang/data/';
+$config['base_url']	= 'http://localhost/sampProRest/ang/data/';
 //$config['base_url']	= 'http://indyaa.org.previewdns.com/intergroup_ci/';
 //$config['base_url']	= 'http://www.indyaa.org/intergroup/';
 
