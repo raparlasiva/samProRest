@@ -2,4 +2,5 @@
 *.xml
 
 nbproject/private/private.xml
-/nbproject/private/
+/nbproject/private/*
+/nbproject/*
