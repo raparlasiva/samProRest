@@ -11,13 +11,23 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
         pkg:grunt.file.readJSON('package.json'),
         clean:['<%= build_dir %>'], // template notation 
         copy:{
-            main:{
-                files:[{
-                    src:['<%= ang_files.js %>'],
-                    dest:'<%= build_dir %>',
-                    cwd:'.',
-                    expand:true
-                }]
+//            angjs:{
+//                files:[{
+//                    src:['<%= ang_files.js %>'],
+//                    dest:'<%= build_dir %>',
+//                    cwd:'.',// current working directory ( or the root of the project)
+//                    expand:true
+//                }]
+//            },
+            angphp:{
+                files:[// includes files within path and its sub-directories
+                        {
+                            expand: true,
+                            cwd:'.', 
+                            src: ['ang/data/**/*'], 
+                            dest: 'build/'
+                        }
+                    ]
             }
         },
         watch:{
@@ -32,7 +42,7 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
     
     grunt.initConfig(grunt.util._.extend(taskConfig,userConfig)); // to append the userConfig to the exisitng taskConfig
     
-    grunt.registerTask('default',['clean']);
+    grunt.registerTask('default',['clean','copy']);
     
     // just for testing the watch task
     grunt.registerTask('test',function(){
