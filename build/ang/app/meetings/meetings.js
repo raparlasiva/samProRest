@@ -31,7 +31,7 @@
                 },
                 views: {
                     '@': {
-                        templateUrl: 'meetings/partials/meeting.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.html',
                         controller:'meeting.Ctrl'
                     }
                 }
@@ -55,7 +55,7 @@
                 },
                 views: {
                     '@intergroupAng.meetings': {
-                        templateUrl: 'meetings/partials/meeting.list.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.list.html',
                         controller: 'meeting.list.Ctrl'
                     }
                 }
@@ -79,7 +79,7 @@
                 },
                 views: {
                     '@intergroupAng.meetings': {
-                        templateUrl: 'meetings/partials/meeting.hour.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.hour.html',
                         controller: 'meeting.hours.Ctrl'
                     }
                 }
@@ -103,7 +103,7 @@
                 },
                 views: {
                     '@intergroupAng.meetings': {
-                        templateUrl: 'meetings/partials/meeting.men.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.men.html',
                         controller: 'meeting.men.Ctrl'
                     }
                 }
@@ -127,7 +127,7 @@
                 },
                 views: {
                     '@intergroupAng.meetings': {
-                        templateUrl: 'meetings/partials/meeting.women.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.women.html',
                         controller: 'meeting.women.Ctrl'
                     }
                 }
@@ -151,7 +151,7 @@
                 },
                 views: {
                     '@intergroupAng.meetings': {
-                        templateUrl: 'meetings/partials/meeting.glbt.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.glbt.html',
                         controller: 'meeting.glbt.Ctrl'
                     }
                 }
@@ -175,7 +175,7 @@
                 },
                 views: {
                     '@intergroupAng.meetings': {
-                        templateUrl: 'meetings/partials/meeting.spanish.tpl.html',
+                        templateUrl: 'meetings/partials/meeting.spanish.html',
                         controller: 'meeting.spanish.Ctrl'
                     }
                 }

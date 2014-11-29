@@ -11,23 +11,26 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
         pkg:grunt.file.readJSON('package.json'),
         clean:['<%= build_dir %>'], // template notation 
         copy:{
-//            angjs:{
-//                files:[{
-//                    src:['<%= ang_files.js %>'],
-//                    dest:'<%= build_dir %>',
-//                    cwd:'.',// current working directory ( or the root of the project)
-//                    expand:true
-//                }]
-//            },
+            angjs:{
+                files:[
+                    {
+                    src:['<%= ang_files.js %>'],
+                    dest:'<%= build_dir %>',
+                    cwd:'.',// current working directory ( or the root of the project)
+                    expand:true
+                    }
+                ]
+            },
             angphp:{
                 files:[// includes files within path and its sub-directories
-                        {
-                            expand: true,
-                            cwd:'.', 
-                            src: ['ang/data/**/*'], 
-                            dest: 'build/'
-                        }
-                    ]
+                    {
+
+                        src: ['<%= ang_files.php %>'], 
+                        dest:'<%= build_dir %>',
+                        cwd:'.',
+                        expand: true
+                    }
+                ]
             }
         },
         watch:{
