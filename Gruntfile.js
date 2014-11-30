@@ -47,7 +47,7 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
         watch:{
             jsang:{
                 files:['<%= ang_files.js %>'],
-                tasks:['clean','copy','index']
+                tasks:['build']
             },
             gruntfile:{
                 files:'Gruntfile.js',
@@ -131,7 +131,9 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
     
     grunt.initConfig(grunt.util._.extend(taskConfig,userConfig)); // to append the userConfig to the exisitng taskConfig
     
-    grunt.registerTask('default',['clean','copy','html2js','less','index']);
+    grunt.registerTask('default',['build','index']);
+    
+     grunt.registerTask('build',['clean','copy','html2js','less']);
     
     // just for testing the watch task
     grunt.registerTask('test',function(){
