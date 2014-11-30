@@ -6,7 +6,8 @@
         "ngSanitize",
         "meetingModuleApp",
         "filtersModule",
-        "pof"
+        "pof",
+        "templates-app"
     ]);
     
     app.run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {

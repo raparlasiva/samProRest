@@ -7,60 +7,11 @@
         <!-- Bootstrap CSS -->
         <link href="../../vendor/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         
-        <!-- Jquery -->
-        <script src="../../vendor/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <!-- templated the JS files so that we would n't need to maintain a manifest of script files -->
+        <% scripts.forEach(function(file){ %>
+        <script type="text/javascript" src="<%= file %>"></script>
         
-        <script src="../../vendor/lib/underscore/underscore-min.js" type="text/javascript"></script>
-        
-        <!-- angular js -->
-        <script src="../../vendor/lib/angular/angular.min.js" type="text/javascript"></script>
-        
-        <!-- angular-resource -->
-        <script src="../../vendor/lib/angular-resource/angular-resource.min.js" type="text/javascript"></script>
-        
-        <!-- angular-sanitize -->
-        <script src="../../vendor/lib/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
-        
-        <!-- angular-ui-router -->
-        <script src="../../vendor/lib/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript"></script>
-        
-        <!-- angular-bootstrap -->
-        <script src="../../vendor/lib/angular-bootstrap/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
-        
-        <!-- Bootstrap Min js -->
-        <script src="../../vendor/lib/bootstrap/dist/bootstrap.min.js" type="text/javascript"></script>
-        
-        <!-- App JS -->
-        <script src="app.js" type="text/javascript"></script>
-        
-        <!-- Meeting JS -->
-        <script src="meetings/meetings.js" type="text/javascript"></script>
-        <!-- meeting main Ctrl -->
-        <script src="meetings/controller/meeting.Ctrl.js" type="text/javascript"></script>
-        <!-- meeting list Ctrl -->
-        <script src="meetings/controller/meeting.list.Ctrl.js" type="text/javascript"></script>
-        <!-- meeting Service -->
-        <script src="meetings/services/meetingService.js" type="text/javascript"></script>
-        
-        <!-- meeting Hour -->
-        <script src="meetings/controller/meeting.hours.Ctrl.js" type="text/javascript"></script>
-        
-        <!-- meeting men controller -->
-        <script src="meetings/controller/meeting.men.Ctrl.js" type="text/javascript"></script>
-        
-        <!-- meeting women ctrl -->
-        <script src="meetings/controller/meeting.women.Ctrl.js" type="text/javascript"></script>
-        
-        <!-- meeting glbt Ctrl -->
-        <script src="meetings/controller/meeting.glbt.Ctrl.js" type="text/javascript"></script>
-        
-        <!-- meeting spanish Ctrl -->
-        <script src="meetings/controller/meeting.spanish.Ctrl.js" type="text/javascript"></script>
-        
-        <!-- Common Directives -->
-        <script src="../common/directives/filters.js" type="text/javascript"></script>
-        
-        <script src="../common/directives/dropdown.js" type="text/javascript"></script>
+        <%});%>
     </head>
     <body>
         <div ui-view>
