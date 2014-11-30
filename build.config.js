@@ -14,18 +14,19 @@ module.exports = { // external user configuration for our grunt file
 
     },
     vendor_files:{
-		js:[
-                    'vendor/lib/jquery/*',
-                    'vendor/lib/underscore/*',
-                    'vendor/lib/angular/*',
-                    'vendor/lib/angular-resource/*',
-                    'vendor/lib/angular-sanitize/*',
-                    'vendor/lib/angular-ui-router/release/angular-ui-router.min.js',
-                    'vendor/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
-                    'vendor/lib/bootstrap/dist/js/bootstrap.min.js',
-                   
-                    
-                ]
+        all:['vendor/lib/**/*'],
+        js:[
+            'vendor/lib/jquery/dist/jquery.min.js',
+            'vendor/lib/underscore/underscore.js',
+            'vendor/lib/angular/angular.min.js',
+            'vendor/lib/angular-resource/angular-resource.min.js',
+            'vendor/lib/angular-sanitize/angular-sanitize.min.js',
+            'vendor/lib/angular-ui-router/release/angular-ui-router.min.js',
+            'vendor/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+            'vendor/lib/bootstrap/dist/js/bootstrap.min.js',
+
+
+        ]
     }
     
     
