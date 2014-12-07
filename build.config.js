@@ -9,7 +9,7 @@ module.exports = { // external user configuration for our grunt file
         // our partial templates
         atpl:['ang/app/**/*.tpl.html'],
         //our index.html
-        html:['ang/app/index.html'],
+        html:['ang/index.html'],
         php:['ang/data/**/*']
 
     },

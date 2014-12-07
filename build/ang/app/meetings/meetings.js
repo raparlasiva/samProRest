@@ -26,7 +26,6 @@
                         meetingWomenAll   : "",
                         meetingSpanishAll : "",
                         meetingGlbtAll    : ""
-
                     } 
                 },
                 views: {
@@ -39,6 +38,7 @@
             .state('intergroupAng.meetings.list', {
                 url: '/list',
                 data: {
+                    pageTitle:"meeting",
                     meetingHome : {
                         pagination                       : "1",
                         numPerPage                       : "25",
@@ -63,6 +63,7 @@
             .state('intergroupAng.meetings.hours', {
                 url: '/hours',
                 data: {
+                    pageTitle:"Meeting Next 5 hours",
                     meetingHour : {
                         pagination                       : "1",
                         numPerPage                       : "25",
@@ -87,6 +88,7 @@
             .state('intergroupAng.meetings.men', {
                 url: '/men',
                 data: {
+                    pageTitle:"Meeting Men",
                     meetingMen : {
                         pagination                       : "1",
                         numPerPage                       : "25",
@@ -111,6 +113,7 @@
             .state('intergroupAng.meetings.women', {
                 url: '/women',
                 data: {
+                    pageTitle:"Meeting Women",
                     meetingWomen : {
                         pagination                       : "1",
                         numPerPage                       : "25",
@@ -135,6 +138,7 @@
             .state('intergroupAng.meetings.glbt', {
                 url: '/glbt',
                 data: {
+                    pageTitle:"Meeting glbt",
                     meetingGlbt : {
                         pagination                       : "1",
                         numPerPage                       : "25",
@@ -159,6 +163,7 @@
             .state('intergroupAng.meetings.spanish', {
                 url: '/spanish',
                 data: {
+                    pageTitle:"Meeting spanish",
                     meetingSpanish : {
                         pagination                       : "1",
                         numPerPage                       : "25",

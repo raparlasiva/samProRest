@@ -184,10 +184,28 @@ angular.module("meetings/partials/meeting.list.tpl.html", []).run(["$templateCac
     "                    <div class=\"well well-lg\">\n" +
     "                        <div class=\"row\">\n" +
     "                            <div class=\"col-lg-3\"><!-- selected_status = -->\n" +
+    "                                <!--\n" +
     "                                <bs-dropdown data-menu-type=\"button\" select-val=\"selected_status =selectedVal\"\n" +
     "                                    preselected-item=\"selected_status\" data-dropdown-data=\"daysArry\">\n" +
-    "                                </bs-dropdown>\n" +
+    "                                </bs-dropdown>-->\n" +
+    "                                <bs-dropdown data-menu-type=\"button\" select-val=\"selected_status=heloo1\"\n" +
+    "                                    preselected-item=\"selected_status\" data-dropdown-data=\"daysArry\">\n" +
+    "                                </bs-dropdown>{{selected_status}}<br/>{{heloo1}}\n" +
     "                            </div>\n" +
+    "                            <!--\n" +
+    "                            <div class=\"input-group\">\n" +
+    "                                <div class=\"input-group-btn\">\n" +
+    "                                    <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\">Action <span class=\"caret\"></span>\n" +
+    "                                    </button>\n" +
+    "                                    <ul class=\"dropdown-menu\" role=\"menu\">\n" +
+    "                                        <li ng-repeat=\"item in items\">\n" +
+    "                                            <a tabindex=\"-1\" data-ng-click=\"selectVal(item)\">{{item.name}}</a>\n" +
+    "                                        </li>\n" +
+    "                                    </ul>\n" +
+    "                                </div>\n" +
+    "                                <input type=\"text\" class=\"form-control\" ng-model=\"selectedItem\">\n" +
+    "                            </div>\n" +
+    "                            -->\n" +
     "                            <!--\n" +
     "                            <div class=\"col-lg-3\">\n" +
     "                                <bs-dropdown data-menu-type=\"button\" select-val=\"selectedVal\"\n" +

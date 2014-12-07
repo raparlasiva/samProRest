@@ -8,10 +8,28 @@
                     <div class="well well-lg">
                         <div class="row">
                             <div class="col-lg-3"><!-- selected_status = -->
+                                <!--
                                 <bs-dropdown data-menu-type="button" select-val="selected_status =selectedVal"
                                     preselected-item="selected_status" data-dropdown-data="daysArry">
-                                </bs-dropdown>
+                                </bs-dropdown>-->
+                                <bs-dropdown data-menu-type="button" select-val="selected_status=heloo1"
+                                    preselected-item="selected_status" data-dropdown-data="daysArry">
+                                </bs-dropdown>{{selected_status}}<br/>{{heloo1}}
                             </div>
+                            <!--
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li ng-repeat="item in items">
+                                            <a tabindex="-1" data-ng-click="selectVal(item)">{{item.name}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control" ng-model="selectedItem">
+                            </div>
+                            -->
                             <!--
                             <div class="col-lg-3">
                                 <bs-dropdown data-menu-type="button" select-val="selectedVal"

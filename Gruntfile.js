@@ -47,7 +47,11 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
         watch:{
             jsang:{
                 files:['<%= ang_files.js %>'],
-                tasks:['build']
+                tasks:['default']
+            },
+             html: {
+                files: [ '<%= ang_files.atpl %>' ],
+                tasks: [ 'default' ]
             },
             gruntfile:{
                 files:'Gruntfile.js',
@@ -179,7 +183,7 @@ module.exports = function(grunt){ // this is a wrapper for Node.js
         var cssFiles = filterForExtension('css', this.filesSrc);
         
         // grunt.file.copy takes three arguments, the source,destination and an options object
-        grunt.file.copy('ang/app/index.html'/*the source */,
+        grunt.file.copy('ang//index.html'/*the source */,
         this.data.dir+'/index.html'/*the destination */,
         {/*the options object */
             // the process property is a function  that takes the contents of the file 
